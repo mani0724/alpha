@@ -1352,12 +1352,12 @@ body p {
 
 @media (max-width: 768px) {
   .main-menu-area.bg_dark_mobile {
-    background-color: #000;
+    background-color: #fff;
   }
 }
 @media (max-width: 575px) {
   .main-menu-area.bg_dark_mobile {
-    background-color: #000;
+    background-color: #fff;
   }
 }
 
@@ -1407,10 +1407,27 @@ body p {
 @media (min-width: 992px) {
   .main-menu ul li a {
     padding: 1rem 1.3rem !important;
+    color: #fff;
+  }
+}
+@media (max-width: 768px) {
+  .main-menu ul li a {
+    color: #000;
+    padding: 1rem 1.3rem !important;
+    transition: all 0.4s linear 0s;
+  }
+  .main-menu ul li a:hover {
+    background-color: #5c5734;
+    color: #000;
   }
 }
 .main-menu .dropdown-menu {
   background-color: #000;
+}
+@media (max-width: 768px) {
+  .main-menu .dropdown-menu {
+    background-color: #fff;
+  }
 }
 .main-menu .navbar {
   padding: 0;
@@ -1469,7 +1486,7 @@ body p {
   padding-right: 0.2rem;
 }
 .main-menu .navbar i {
-  color: #fff;
+  color: #000;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .main-menu {
@@ -1482,6 +1499,7 @@ body p {
 @media (max-width: 768px) {
   .main-menu {
     padding: 15px 0;
+    background-color: #fff;
   }
   .main-menu .navbar-brand {
     display: none;
