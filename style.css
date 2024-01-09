@@ -6163,7 +6163,7 @@ html .header.fixed div {
 
 @media (max-width: 640px){
 .right_menu {
-  background: #ffc001;
+  background: #baaf57;
   flex-direction: row;
   width: 100% !important;
   padding: 10px !important;
