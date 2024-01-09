@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Alpha Edu Services</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+      
+
+        button {
+            background-color: #da1818;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px; 
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        .form-columns {
+            display: flex;
+            gap: 16px;
+        }
+
+        .form-column {
+            flex: 1;
+        }
+        
+
+/* Apply styles to the submit button */
+.popup-content button[type="submit"] {
+  width: 100%; /* Make the button take full width */
+  /* ... other styles ... */
+}
+/* Apply styles to the form container */
+.popup-content {
+  width: 100%;
+  max-width: none; /* Remove the maximum width */
+  padding: 20px;
+  background-color: rgb(210, 202, 135); /* Change the background color as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  color: #000; /* Change text color as needed */
+  transition: background-color 0.3s ease;
+}
+
+/* Container-fluid to take full width */
+.container-fluid {
+  width: 100%;
+  padding: 0;
+  padding-top: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 60px;
+}
+
+/* Apply styles to form fields */
+.popup-content input[type="text"],
+.popup-content input[type="email"],
+.popup-content input[type="tel"],
+.popup-content input[type="number"],
+.popup-content input[type="date"],
+.popup-content select {
+  width: calc(100% - 20px); /* Adjust the width as needed and consider padding */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333; /* Change text color as needed */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Add hover effect to form fields */
+.popup-content input[type="text"]:hover,
+.popup-content input[type="email"]:hover,
+.popup-content input[type="tel"]:hover,
+.popup-content input[type="number"]:hover,
+.popup-content input[type="date"]:hover,
+.popup-content select:hover {
+  background-color: #ecf0f1; /* Change the hover background color as needed */
+  color: #333; /* Change the hover text color as needed */
+}
+
+/* Apply styles to the submit button */
+.popup-content button[type="submit"] {
+  width: 100%; /* Make the button take full width */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2923d7; /* Change the button color as needed */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Add hover effect to the submit button */
+.popup-content button[type="submit"]:hover {
+  background-color: #3066c3; /* Change the hover button color as needed */
+}
+
+/* Close button styles */
+.right-corner-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.right-corner-button:hover {
+  color: #f0e7e7; /* Change the hover color as needed */
+}
+
+/* Close button with an "X" icon */
+.right-corner-button::before {
+  content: '';
+}
+
+/* Optionally, you can add a bit of padding and background to the close button */
+.right-corner-button {
+  padding: 12px;
+  background-color: rgba(228, 16, 16, 0.5); /* Change the background color as needed */
+  border-radius: 90%;
+}
+  
+    </style>
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header>
+        <div class="header_top_area my-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="header_top d-flex justify-content-between">
+                            <div class="site_logo">
+                                <a href="index.html"><img src="assets/images/alpha/logo.png" alt="logo" class="img-fluid"></a>
+                            </div>
+                            <div class="site_info d-flex justify-content-between">
+                                <div class="single_info">
+                                    <img src="assets/images/location.png" alt="Location" class="img-fluid">
+                                    <div class="info_data">
+                                        <h6>Location</h6>
+                                        <p>1010 New York, NY 10018 US</p>
+                                    </div>
+                                </div>
+                                <div class="single_info">
+                                    <img src="assets/images/phone.png" alt="Location" class="img-fluid">
+                                    <div class="info_data">
+                                        <h6>Phone</h6>
+                                        <p>+880 2456 547</p>
+                                    </div>
+                                </div>
+                                <div class="single_info">
+                                    <button class="special-button" onclick="openPopup()">Apply Now <i class="fa fa-angle-right"></i> <span class="button_icon"><i class="far fa-file-alt"></i></span></button>
+                               
+
+
+<div class="popup-overlay" id="popupOverlay">
+    <div class="container-fluid" style="width: 100%;">
+    <div class="popup-content">
+        <form action="#" method="post">
+          
+            <button type="button" onclick="closePopup()" class="right-corner-button">X</button>
+                 <h2 style="text-align: center;">Application Form</h2>
+            <div class="form-columns">
+                <div class="form-column">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+          </div>
+
+                <div class="form-column">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>  </div>
+            </div>
+
+                 
+            <div class="form-columns">
+                <div class="form-column">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+          </div>
+
+                <div class="form-column">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+        </div>
+            </div>
+            <label for="degree">Address:</label>
+            <input type="text" id="address" name="address" required>
+          
+          <h3>Education Details</h3>
+            <div class="form-columns">
+                <div class="form-column">
+                    <label for="dob">Preffered Colleges</label>
+                    <input type="tel" id="phone" name="phone" required>
+          </div>
+
+                <div class="form-column">
+
+                    <label for="phone">Preffered Courses</label>
+                    <input type="tel" id="phone" name="phone" required>
+               
+        </div>
+            </div>
+
+            <div class="form-columns">
+                <div class="form-column">
+                    <label for="dob">Any Entrance Appeared</label>
+                    <input type="tel" id="phone" name="phone" required>
+          </div>
+
+                <div class="form-column">
+                    <label for="phone">Current Academics Details</label>
+                    <input type="tel" id="phone" name="phone" required>
+        </div>
+            </div>
+
+
+
+
+            <div class="form-columns">
+                <div class="form-column">
+                    <label for="place">!0<sup>th</sup> Percentage</label>
+                    <input type="number" id="place" name="place" required>
+                </div>
+
+                <div class="form-column">
+                    <label for="marks">Remarks:</label>
+                    <input type="text" id="remarks" name="remarks" required>
+                </div>
+                <div class="form-column">
+                    <label for="place">Budget</label>
+                    <input type="number" id="place" number="place" required></div>
+            </div>
+
+        
+            <!-- Additional fields go here -->
+
+            <button type="submit">Submit</button>
+          
+        </form>
+    </div>
+</div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-menu-area bg_dark_mobile">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-menu default_bg">
+                            <nav class="navbar navbar-expand-lg">
+                                <div class="mobile_site_logo d-none">
+                                    <a href="index.html"><img src="assets/images/footer_logo.png" alt="logo" class="img-fluid"></a>
+                                </div>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                                    <i class="fa fa-bars"></i>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          Home
+                                        </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                <a class="dropdown-item" href="index.html">Home - University</a>
+                                                <a class="dropdown-item" href="index-2.html">Home - Modern University</a>
+                                                <a class="dropdown-item" href="index-3.html">Home - Online Courses</a>
+                                                <a class="dropdown-item" href="index-4.html">Home - Kindergarten</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="about.html">About</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="courses.html">Courses</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                                              Pages
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item" href="departments.html">Departments</a></li>
+                                                <li class="nav-item dropdown">
+                                                    <a class="dropdown-item dropdown-toggle" href="#" id="blogDropdown1" role="button" data-bs-toggle="dropdown">
+                                                        Blog
+                                                    </a>
+                                                    <ul class="dropdown-menu" aria-labelledby="blogDropdown1">
+                                                        <li><a class="dropdown-item" href="blog_01.html">Blog 1</a></li>
+                                                        <li><a class="dropdown-item" href="blog_02.html">Blog 2</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a class="dropdown-item" href="blog_details.html">Blog Details</a></li>
+                                                <li><a class="dropdown-item" href="teachers.html">Teachers</a></li>
+                                                <li><a class="dropdown-item" href="teacher_details.html">Teacher Details</a></li>
+												<li><a class="dropdown-item" href="events.html">Events</a></li>
+												<li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="students.html" class="nav-link" id="blod_pages">
+                                                Students
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="result.html" class="nav-link">Result</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="notice.html" class="nav-link">Notice</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="contact.html" class="nav-link">Contact</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#search_modal" data-bs-toggle="modal" data-bs-target="#search_modal" class="nav-link"><i class="fa fa-search"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="collapse-bar">
+                                        <a class="navbar-brand" data-bs-toggle="collapse" href="#languages_options"><i class="fa fa-bars"></i></a>
+                                        <div class="option-menu collapse" id="languages_options">
+                                            <nav>
+                                                <ul>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">English</a>
+                                                        <a class="nav-link" href="#">Bangla</a>
+                                                        <a class="nav-link" href="#">Hindi</a>
+                                                        <a class="nav-link" href="#">Spanish</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Button trigger modal -->
+            <!-- Start Search Modal -->
+            <div class="modal fade" id="search_modal">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title sm-sub-title">Search Here</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <div class="search-widget">
+                                <form action="#">
+                                    <input type="text" class="form-control" placeholder="Search Here">
+                                    <button type="submit"><i class="fas fa-search"></i></button>
+                                </form>
+                        </div>
+                    <div class="search-results">
+                        <h5 class="my-4 sm-sub-title">10 Search Results Found</h5>
+                        <div class="theme-list">
+                            <ul>
+                                <li><a href="#">Smply dummy text of the printing and typesetting industry</a></li>
+                                <li><a href="#">Mauris at varius orci. Vestibulum um felis eu nisl pulvinar</a></li>
+                                <li><a href="#">Welcome To Our Campus For Learn</a></li>
+                                <li><a href="#">The point of using Lorem Ipsum is that it has a more-or-less </a></li>
+                                <li><a href="#">has a more-or-less normal distribution of letters, as opposed to using.</a></li>
+                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. </a></li>
+                                <li><a href="#">Build Education Website Using WP</a></li>
+                                <li><a href="#">Build Education Website Using WordPress </a></li>
+                                <li><a href="#">And Other Modern Technology</a></li>
+                                <li><a href="#">assumenda est. Our friendly support team is standing.</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="button_one" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
+             <!-- End Search Modal -->
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+
+    <!-- Start Hero Area -->
+    <section class="hero-section height-470" style="background-image:url(assets/images/about_us.png)" data-aos="fade-up">
+        <div class="hero-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="page-hrader text-white text-center">
+                            <h1 class="display-2">Admission Form</h1>
+                            <div class="page-breadcrumb">
+                                <p><a class="text-white" href="index.html">Home</a> - Apply</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Area -->
+
+
+
+    <!--Start Page -->
+    <div class="page-wrapper section-ptb-3" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 mx-auto">
+                    <div class="apply-wrapper">
+                        <h2>Apply this form to admission</h2>
+                        <form action="#" class="apply_form bg_dark_9 p-5">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="user_first_name">Enter First Name</label>
+                                        <input type="text" class="form-control" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="user_last_name">Enter Last Name</label>
+                                        <input type="text" class="form-control" placeholder="Last Name">
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                            <!-- <div class="row"> -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="user_class">Class you want to apply for*</label>
+                                        <select name="user_class" id="user_class" class="form-control">
+                                            <option value="1">Class One</option>
+                                            <option value="2">Class Two</option>
+                                            <option value="3">Class Three</option>
+                                            <option value="4">Class Four</option>
+                                            <option value="5">Class Five</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="user_last_name">Student’s Birthday</label>
+                                        <input type="text" class="form-control" placeholder="MM/DD/YY">
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                            <!-- <div class="row"> -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="guardian_first_name">Parents/ Guardian First Name</label>
+                                        <input type="text" class="form-control" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="guardian_last_name">Parents/ Guardian Last Name</label>
+                                        <input type="text" class="form-control" placeholder="Last Name">
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                            <!-- <div class="row"> -->
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="std_address">Student's Address</label>
+                                        <input type="text" class="form-control" placeholder="State Address">
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                            <!-- <div class="row"> -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="user_city">City</label>
+                                        <input type="text" class="form-control" placeholder="City">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="user_last_name">Country</label>
+                                        <input type="text" class="form-control" placeholder="Country">
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                            <!-- <div class="row"> -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="user_phone_number">Phone Number</label>
+                                        <input type="text" class="form-control" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="user_email">Email Address</label>
+                                        <input type="text" class="form-control" placeholder="Email Address">
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                            <!-- <div class="row"> -->
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="user_comment">Write Your Comment</label>
+                                        <textarea name="user_comment" class="form-control" id="user_comment" cols="30" rows="5" placeholder="Your Comment"></textarea>
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                            <!-- <div class="row"> -->
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="user_signature">Digital Signature</label>
+                                        <textarea name="user_signature" class="form-control" id="user_signature" cols="30" rows="5" placeholder="Your Signature"></textarea>
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                            <!-- <div class="row"> -->
+                                <div class="col-md-12 mx-auto text-center">
+                                    <button type="submit" class="button_one mt-3">Submit Form</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page -->
+
+
+
+    <!-- Start Footer -->
+    <footer data-aos="fade-up">
+        <div class="subscribe-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="subscribe-wrapper p-5 bg-white">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="subscribe-text">
+                                        <h2>Newsletters</h2>
+                                        <p>Consectetur adipisicing elit, sed do eiusmod tempoe</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="subscribe-form">
+                                        <form action="#">
+                                            <input type="email" class="form-control" placeholder="Enter Your Email Here">
+                                            <button type="submit">Subscribe</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-area default_bg">
+            <div class="footer-top section-ptb-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="single_widget">
+                                <div class="address-widget">
+                                    <div class="footer-logo">
+                                        <a href="index.html"><img src="assets/images/footer_logo.png" alt="" class="img-fluid"></a>
+                                    </div>
+                                    <p>900 Lucerne Station Road Terrace, Orlando, FL 32806, USA contact@eduaid.com</p>
+                                    <span>+892 5555 444</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-3d-5">
+                            <div class="single_widget">
+                                <h3>Useful Links</h3>
+                                <div class="widget-list">
+                                    <ul>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Our Instructors</a></li>
+                                        <li><a href="#">Courses</a></li>
+                                        <li><a href="#">History</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Service Plus</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-xs-5">
+                            <div class="single_widget">
+                                <h3>Our Services</h3>
+                                <div class="widget-list">
+                                    <ul>
+                                        <li><a href="#">CSE Engeering</a></li>
+                                        <li><a href="#">Graduation</a></li>
+                                        <li><a href="#">Courses</a></li>
+                                        <li><a href="#">Admission</a></li>
+                                        <li><a href="#">Internation</a></li>
+                                        <li><a href="#">Faqs</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="single_widget">
+                                <h3>Latest News</h3>
+                                <div class="widget-item">
+                                    <div class="widget-image">
+                                        <a href="#"><img src="assets/images/blog_01.jpg" alt="blog one" /></a>
+                                    </div>
+                                    <div class="widget-content">
+                                        <h5><a href="#">7 Step Social Media Marke ting Strategy</a></h5>
+                                        <div class="widget-meta">
+                                            <span>05 Jan 2019</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-item">
+                                    <div class="widget-image">
+                                        <a href="#"><img src="assets/images/blog_02.jpg" alt="blog one" /></a>
+                                    </div>
+                                    <div class="widget-content">
+                                        <h5><a href="#">7 Step Social Media Marke ting Strategy</a></h5>
+                                        <div class="widget-meta">
+                                            <span>05 Jan 2019</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-wrapper border-top py-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="footer-bottom">
+                                <div class="copyright-text">
+                                    <p>Eduaid 2019. All Rights Reserved.</p>
+                                </div>
+                                <div class="social-accounts">
+                                    <ul>
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+
+    
+    <div class="scroll-top">
+        <div class="scroll-icon">
+            <i class="fa fa-angle-up"></i>
+        </div>
+    </div>
+
+
+    
+    <script src="assets/js/jquery-3.4.0.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/bootnavbar.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function openPopup() {
+            document.getElementById("popupOverlay").style.display = "flex";
+        }
+    
+        function closePopup() {
+            document.getElementById("popupOverlay").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

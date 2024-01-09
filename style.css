@@ -536,7 +536,7 @@ button.close {
 }
 .theme-list ul li a:before {
   content: "";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
   padding-right: 5px;
   color: #5c5734;
@@ -618,7 +618,7 @@ button.close {
 }
 .theme-list-4 ul li:before {
   content: "";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
   padding-right: 5px;
   color: #5c5734;
@@ -865,17 +865,17 @@ button.close {
 }
 
 .border-5 {
-  border: 2px solid #d0f2fc;
+  border: 2px solid #baaf57;
   transition: all 0.4s linear 0s;
 }
 
 .border-6 {
-  border: 2px solid #dddddd;
+  border: 2px solid #baaf57;
   transition: all 0.4s linear 0s;
 }
 
 .border-7 {
-  border: 5px solid #1d2144;
+  border: 5px solid #baaf57;
   transition: all 0.4s linear 0s;
 }
 
@@ -1246,7 +1246,7 @@ button.close {
    1. header
 *********************************/
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #666;
   font-size: 16px;
 }
@@ -1352,12 +1352,12 @@ body p {
 
 @media (max-width: 768px) {
   .main-menu-area.bg_dark_mobile {
-    background-color: #fff;
+    background-color: #000;
   }
 }
 @media (max-width: 575px) {
   .main-menu-area.bg_dark_mobile {
-    background-color: #fff;
+    background-color: #000;
   }
 }
 
@@ -1407,27 +1407,10 @@ body p {
 @media (min-width: 992px) {
   .main-menu ul li a {
     padding: 1rem 1.3rem !important;
-    color: #fff;
-  }
-}
-@media (max-width: 768px) {
-  .main-menu ul li a {
-    color: #000;
-    padding: 1rem 1.3rem !important;
-    transition: all 0.4s linear 0s;
-  }
-  .main-menu ul li a:hover {
-    background-color: #5c5734;
-    color: #000;
   }
 }
 .main-menu .dropdown-menu {
   background-color: #000;
-}
-@media (max-width: 768px) {
-  .main-menu .dropdown-menu {
-    background-color: #fff;
-  }
 }
 .main-menu .navbar {
   padding: 0;
@@ -1486,7 +1469,7 @@ body p {
   padding-right: 0.2rem;
 }
 .main-menu .navbar i {
-  color: #000;
+  color: #fff;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .main-menu {
@@ -1499,7 +1482,6 @@ body p {
 @media (max-width: 768px) {
   .main-menu {
     padding: 15px 0;
-    background-color: #fff;
   }
   .main-menu .navbar-brand {
     display: none;
@@ -1532,7 +1514,7 @@ body p {
 }
 .main-menu-2 .dropdown-toggle::after {
   content: "";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
   border-top: 0;
   vertical-align: baseline;
@@ -1592,7 +1574,7 @@ body p {
 }
 .main-menu-3 .dropdown-toggle::after {
   content: "";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
   border-top: 0;
   vertical-align: baseline;
@@ -1841,7 +1823,7 @@ body p {
 }
 .swiper-button-next:before {
   content: "";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
   position: absolute;
   left: 0;
@@ -1888,7 +1870,7 @@ body p {
 }
 .swiper-button-prev:before {
   content: "";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
   position: absolute;
   left: 0;
@@ -3794,7 +3776,7 @@ body p {
   line-height: 40px;
   background-color: #baaf57;
   color: #fff;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
   font-size: 14px;
   text-align: center;
@@ -3842,7 +3824,7 @@ body p {
   line-height: 50px;
   background-color: #5c5734;
   color: #fff;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
   text-align: center;
 }
@@ -3874,7 +3856,7 @@ body p {
   line-height: 50px;
   background-color: #baaf57;
   color: #fff;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
   text-align: center;
 }
@@ -3901,7 +3883,7 @@ body p {
 }
 .single-testimonial-6 > p:after {
   content: "";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
   position: absolute;
   padding-left: 10px;
@@ -4725,7 +4707,7 @@ body p {
   width: 50px;
   height: 50px;
   background-color: #222222;
-  bottom: 80px;
+  bottom: 20px;
   right: 20px;
   z-index: 9999;
   cursor: pointer;
@@ -5150,7 +5132,7 @@ body p {
   }
   .timeline-wrapper .single-timeline:before {
     content: "";
-    font-family: "Font Awesome 5 Free";
+    font-family: "Poppins", sans-serif;
     font-weight: 900;
     position: absolute;
     top: -50px;
@@ -6237,6 +6219,26 @@ flex-direction: column;
 .chat-icon  .icon{
   border-radius: 50%;
   
+}
+.fas{
+  color: rgb(210, 202, 135);
+  transition: box-shadow 0.3s ease; 
+font-size: 20px;
+text-align: left;
+line-height: 30px;
+}
+
+
+.fas i {
+font-size: 40px; /* Set the size of the icon */
+color: #3498db; /* Set the color of the icon */
+margin: 10px; /* Add margin for spacing */
+/* Add any additional styles you want */
+}
+
+.fas:hover {
+color: #000; /* Change color on hover */
+/* Add any additional hover styles */
 }
 
 /*# sourceMappingURL=style.css.map */

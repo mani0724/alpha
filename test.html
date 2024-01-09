@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Form with Three Columns</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .popup {
+      display: none;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      max-width: 800px;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .column {
+      width: 33.33%; /* Three columns, adjust as needed */
+      box-sizing: border-box;
+      padding: 0 10px;
+      margin-bottom: 16px;
+      float: left; /* Float the columns next to each other */
+    }
+
+    .popup label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .popup input,
+    .popup textarea,
+    .popup select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    .popup button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .image-container {
+      text-align: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    /* Clear the float after the columns */
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  </style>
+</head>
+<body>
+
+<button onclick="togglePopup()">Open Popup</button>
+
+<div id="popup" class="popup">
+  <div class="image-container">
+    <img src="https://via.placeholder.com/400x150" alt="Sample Image">
+  </div>
+
+  <div class="column">
+    <h2>Contact Information</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your full name">
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email address">
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" placeholder="Enter your phone number">
+  </div>
+
+  <div class="column">
+    <h2>Personal Information</h2>
+    <label for="address">Address:</label>
+    <input type="text" id="address" placeholder="Enter your address">
+    <label for="course">Course:</label>
+    <input type="text" id="course" placeholder="Enter the course">
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob">
+  </div>
+
+  <div class="column">
+    <h2>Educational Information</h2>
+    <label for="preferredCourses">Preferred Courses:</label>
+    <input type="text" id="preferredCourses" placeholder="Enter preferred courses">
+    <label for="preferredColleges">Preferred Colleges:</label>
+    <input type="text" id="preferredColleges" placeholder="Enter preferred colleges">
+    <label for="entranceAppeared">Any Entrance Appeared:</label>
+    <select id="entranceAppeared">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <label for="currentAcademics">Current Academics Details:</label>
+    <textarea id="currentAcademics" placeholder="Enter current academics details"></textarea>
+    <label for="tenthPercentage">10th Percentage:</label>
+    <input type="text" id="tenthPercentage" placeholder="Enter 10th percentage">
+  </div>
+
+  <div class="clearfix"></div> <!-- Clear the float after the columns -->
+
+  <div class="column">
+    <h2>Additional Information</h2>
+    <label for="remarks">Remarks:</label>
+    <textarea id="remarks" placeholder="Enter any remarks"></textarea>
+    <label for="budget">Budget:</label>
+    <input type="text" id="budget" placeholder="Enter budget">
+  </div>
+
+  <button onclick="submitForm()">Submit</button>
+</div>
+
+<script>
+  function togglePopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+  }
+
+  function submitForm() {
+    // Add your form submission logic here
+    alert('Form submitted!');
+    togglePopup(); // Close the popup after submission
+  }
+</script>
+
+</body>
+</html>
