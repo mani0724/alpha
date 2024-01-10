@@ -486,7 +486,7 @@ button.close {
 .rounded-btn {
   display: inline-block;
   position: relative;
-  background-color: #d0f2fc;
+  background-color: #baaf57;
   border: 0;
   color: #baaf57;
   width: 35px;
@@ -501,7 +501,7 @@ button.close {
   font-size: 16px;
 }
 .rounded-btn i {
-  color: #baaf57;
+  color: #000;
 }
 .rounded-btn:hover {
   text-decoration: none;
@@ -1350,14 +1350,20 @@ body p {
   outline-color: #5c5734;
 }
 
+@media (max-width: 992px) {
+  .main-menu-area.bg_dark_mobile {
+    background-color: #fff;
+  }
+}
+
 @media (max-width: 768px) {
   .main-menu-area.bg_dark_mobile {
-    background-color: #000;
+    background-color: #fff;
   }
 }
 @media (max-width: 575px) {
   .main-menu-area.bg_dark_mobile {
-    background-color: #000;
+    background-color: #fff;
   }
 }
 
@@ -1404,19 +1410,47 @@ body p {
   background-color: #5c5734;
   color: #fff;
 }
-@media (min-width: 992px) {
-  .main-menu ul li a {
-    padding: 1rem 1.3rem !important;
+@media (max-width: 768px) {
+  .main-menu ul li a{
+    color:#000;
+  
   }
 }
+@media (max-width: 575px) {
+  .main-menu ul li a{
+    color:#000;
+  
+  }
+}
+
+
 .main-menu .dropdown-menu {
   background-color: #000;
 }
+
+@media (max-width: 768px) {
+  .main-menu .dropdown-menu {
+    background-color: #fff;
+  
+  }
+}
+@media (max-width: 575px) {
+  .main-menu .dropdown-menu {
+    background-color: #fff;
+  }
+}
+
+
 .main-menu .navbar {
   padding: 0;
 }
 .main-menu .navbar-brand i {
-  color: #fff;
+  color: #000;
+}
+@media (min-width: 768px) {
+  .main-menu .navbar-brand i {
+    color: #000;
+  } 
 }
 .main-menu .dropdown-menu {
   transition: all 0.4s linear 0s;
@@ -1469,11 +1503,12 @@ body p {
   padding-right: 0.2rem;
 }
 .main-menu .navbar i {
-  color: #fff;
+  color: #000;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .main-menu {
     padding: 15px 20px;
+    background-color: #fff;
   }
   .main-menu .navbar-brand {
     display: none;
@@ -1482,6 +1517,7 @@ body p {
 @media (max-width: 768px) {
   .main-menu {
     padding: 15px 0;
+    background-color: #fff;
   }
   .main-menu .navbar-brand {
     display: none;
@@ -2118,7 +2154,7 @@ body p {
   transition: all 0.4s linear 0s;
 }
 .single-service-4:hover {
-  box-shadow: 0 1rem 3rem rgba(20, 189, 238, 0.35) !important;
+  box-shadow: 0 1rem 3rem rgba(102, 128, 60, 0.35) !important;
   border-color: #baaf57;
 }
 
@@ -6242,3 +6278,12 @@ color: #000; /* Change color on hover */
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+#bold{
+  color: #baaf57;
+  align-items: center;
+  font-weight: 700;
+  font-size: x-large;
+  font-family:'Times New Roman', Times, serif;
+}
