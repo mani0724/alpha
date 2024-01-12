@@ -5674,7 +5674,6 @@ body p {
 *******************************/
 .single-event-info {
   display: flex;
-  align-items: center;
   transition: all 0.4s linear 0s;
 
 }
@@ -5685,7 +5684,6 @@ body p {
 @media (max-width: 768px) {
   .single-event-info {
     display: inline-block;
-    text-align: center;
   }
   .single-event-info .single-event-date {
     margin: 0 auto 20px auto;
