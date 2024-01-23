@@ -302,8 +302,8 @@ button.close {
 }
 .button_one:hover {
   text-decoration: none;
-  background-color: rgba(255, 82, 2, 0.85);
-  color: #fff;
+  background-color: #fff;
+  color: #000;
 }
 
 .special-button {
@@ -311,7 +311,7 @@ button.close {
   position: relative;
   background-color: #5c5734;
   border: 0;
-  color: #fff;
+  color: #000;
   padding: 16px 80px 16px 16px;
   transition: all 0.4s linear 0s;
   font-size: 15px;
@@ -328,8 +328,8 @@ button.close {
 }
 .special-button:hover {
   text-decoration: none;
-  background-color: rgba(255, 82, 2, 0.85);
-  color: #fff;
+  background-color: #fff;
+  color: #000;
 }
 
 .button_one_alt {
