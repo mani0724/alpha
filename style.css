@@ -302,7 +302,7 @@ button.close {
 }
 .button_one:hover {
   text-decoration: none;
-  background-color: #fff;
+  background-color: #000;
   color: #000;
 }
 
@@ -311,7 +311,7 @@ button.close {
   position: relative;
   background-color: #5c5734;
   border: 0;
-  color: #000;
+  color: #fff;
   padding: 16px 80px 16px 16px;
   transition: all 0.4s linear 0s;
   font-size: 15px;
@@ -328,7 +328,7 @@ button.close {
 }
 .special-button:hover {
   text-decoration: none;
-  background-color: #fff;
+  background-color: #baaf57;
   color: #000;
 }
 
@@ -4520,9 +4520,9 @@ body p {
   height: 40px;
   line-height: 40px;
   color: #fff;
-  border: 1px solid #2b344e;
+  border: 1px solid #baaf57;
   border-radius: 50%;
-  background-color: #2b344e;
+  background-color: #5c5734;
   transition: all 0.4s linear 0s;
   text-align: center;
   margin: 0 5px;
@@ -4558,9 +4558,9 @@ body p {
   height: 40px;
   line-height: 40px;
   color: #fff;
-  border: 1px solid #2b344e;
+  border: 1px solid #fff;
   border-radius: 50%;
-  background-color: #2b344e;
+  background-color: #fff;
   transition: all 0.4s linear 0s;
   text-align: center;
   margin: 0 5px;
@@ -4588,9 +4588,9 @@ body p {
   height: 40px;
   line-height: 40px;
   color: #fff;
-  border: 1px solid #2b344e;
+  border: 1px solid #fff;
   border-radius: 50%;
-  background-color: #2b344e;
+  background-color: #fff;
   transition: all 0.4s linear 0s;
   text-align: center;
   margin: 0 5px;
