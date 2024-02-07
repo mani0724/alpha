@@ -1324,7 +1324,7 @@ body p {
   }
 }
 .single_info img {
-  padding-right: 9px;
+  padding-right: 8px;
 }
 @media (max-width: 575px) {
   .single_info img {
